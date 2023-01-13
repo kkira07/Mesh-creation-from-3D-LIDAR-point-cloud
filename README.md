@@ -9,4 +9,4 @@ Részfeladatok:
 - A modell feltöltése OpenStreetMap-re, generikus CAD fájl kimenet létrehozása.
 
 A szakdolgozat elkészítéséhez segédletnek létrehozott státusztábla és a hozzá kapcsolódó források:
-https://docs.google.com/spreadsheets/d/1eU2DpAmq5Aa4l-W5WdOUBwwwMSZWgDM9zuSsYl-_ekU/edit#gid=1136596114
+https://docs.google.com/spreadsheets/d/1eU2DpAmq5Aa4l-W5WdOUBwwwMSZWgDM9zuSsYl-_ekU/edit#gid=0
