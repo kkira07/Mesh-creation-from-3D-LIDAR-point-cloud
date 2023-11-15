@@ -104,9 +104,9 @@ del pcd_trees, pcd_lamps
 print("Separation complete")
 
 #Épületek modellé alakítása
-eps = 2 #2
+eps = 2
 min_samples = 20
-alpha = 200 #200
+alpha = 200
 mesh = mesha.alphamesh(pcd, eps, min_samples, alpha)
 o3d.io.write_triangle_mesh("final/output/buildings_temp.obj", mesh)
 del pcd, mesh

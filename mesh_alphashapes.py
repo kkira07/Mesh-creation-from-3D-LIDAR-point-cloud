@@ -6,6 +6,7 @@ import random
 def alphamesh(pcd, eps, min_samples, alpha):
     points = np.asarray(pcd.points)
 
+    #Clusterekre bontás
     db = DBSCAN(eps=eps, min_samples=min_samples)
     labels = db.fit_predict(points)
 
@@ -22,7 +23,8 @@ def alphamesh(pcd, eps, min_samples, alpha):
         cluster_points = points[labels == label]
             
         pcd_cluster.points = o3d.utility.Vector3dVector(cluster_points)
-            
+        
+        #Clusterek pontjainak egységes szintbe hozása az épületek formájához
         for point in pcd_cluster.points:
             z_max_height = random.uniform(10, 25)
             z_mid_height = random.uniform(0, 15)
@@ -31,6 +33,7 @@ def alphamesh(pcd, eps, min_samples, alpha):
             elif point[2] > z_mid_threshold: point[2] = z_mid_height
             else: point[2] = z_min_height
 
+        #Alphamesh alkalmazása az egyes clustereken
         mesh = o3d.geometry.TriangleMesh.create_from_point_cloud_alpha_shape(pcd_cluster, alpha)
         mesh.compute_vertex_normals()
 
