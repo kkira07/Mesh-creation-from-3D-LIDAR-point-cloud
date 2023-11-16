@@ -8,5 +8,11 @@ Részfeladatok:
 - A két módszerrel készült mesh összehasonlítása, objektív és szubjektív szempontok alapján (Ajánlott Blender/CloudCompare/Python script)
 - A modell feltöltése OpenStreetMap-re, generikus CAD fájl kimenet létrehozása.
 
-A szakdolgozat elkészítéséhez segédletnek létrehozott státusztábla és a hozzá kapcsolódó források:
-https://docs.google.com/spreadsheets/d/1eU2DpAmq5Aa4l-W5WdOUBwwwMSZWgDM9zuSsYl-_ekU/edit#gid=0
+Jelen repository az automatikus módszer kódját tartalmazza. Elsősorban viszonylag sík területek felszíni méréssel készült leképezésének feldolgozására fókuszál.
+**A futtatáshoz szükséges előkészületek és eszközök:**
+- Python 3.10 virtuális környezet
+- NumPy
+- Open3D
+- PyVista
+- CUDA kompatibilis GPU
+- legalább 8-16GB RAM
