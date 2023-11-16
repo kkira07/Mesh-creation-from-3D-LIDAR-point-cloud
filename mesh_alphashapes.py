@@ -16,26 +16,24 @@ def alphamesh(pcd, eps, min_samples, alpha):
     pcd_cluster = o3d.geometry.PointCloud()
     
     cl_num = 1
-    z_max_threshold = 16
-    z_mid_threshold = 10
 
     for label in unique_labels:
+        if label == -1:
+            continue
         cluster_points = points[labels == label]
             
         pcd_cluster.points = o3d.utility.Vector3dVector(cluster_points)
         
         #Clusterek pontjainak egységes szintbe hozása az épületek formájához
+        z_max_height = np.max(cluster_points[:, 2])
+        z_min_height = np.min(cluster_points[:, 2])
+        
         for point in pcd_cluster.points:
-            z_max_height = random.uniform(10, 25)
-            z_mid_height = random.uniform(0, 15)
-            z_min_height = random.uniform(-5, 0)
-            if point[2] > z_max_threshold: point[2] = z_max_height
-            elif point[2] > z_mid_threshold: point[2] = z_mid_height
-            else: point[2] = z_min_height
+            point[2] = random.uniform(z_max_height, z_min_height-2)
 
         #Alphamesh alkalmazása az egyes clustereken
         mesh = o3d.geometry.TriangleMesh.create_from_point_cloud_alpha_shape(pcd_cluster, alpha)
-        mesh.compute_vertex_normals()
+        #mesh.compute_vertex_normals()
 
         combined_mesh += mesh
         print(f'Cluster number {cl_num} is done')

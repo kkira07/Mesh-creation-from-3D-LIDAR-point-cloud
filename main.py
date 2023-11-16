@@ -104,9 +104,9 @@ del pcd_trees, pcd_lamps
 print("Separation complete")
 
 #Épületek modellé alakítása
-eps = 2
-min_samples = 20
-alpha = 200
+eps = 1.5
+min_samples = 20 #20
+alpha = 100 #200
 mesh = mesha.alphamesh(pcd, eps, min_samples, alpha)
 o3d.io.write_triangle_mesh("final/output/buildings_temp.obj", mesh)
 del pcd, mesh
@@ -128,7 +128,7 @@ print("Trees and streetlamps added")
 
 #Földi pontok modellé alakítása
 pcd_ground = o3d.io.read_point_cloud("final/output/ground_points_temp.ply")
-num_points_to_keep = 3000000
+num_points_to_keep = 2500000
 mesh_ground = meshd.delaunay_ground(pcd_ground, num_points_to_keep)
 print("Ground complete")
 
