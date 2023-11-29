@@ -68,7 +68,7 @@ During the process, the code separates the ground points from the ponts of the b
 <img src="https://github.com/kkira07/Szakdolgozat/blob/main/output/segmentation.png?raw=true" width="400" height="240" alt="Building segmentation">
 </p>
 <p align="center">
-Separation of ground and buildings (left), and building segmentation (right).
+Separation of ground and buildings (1), and building segmentation (2).
 </p>
 <p>
 <b>Results:</b>
@@ -79,5 +79,5 @@ Separation of ground and buildings (left), and building segmentation (right).
 <img src="https://github.com/kkira07/Szakdolgozat/blob/main/output/code_model.png?raw=true" width="600" height="360" alt="Model produced by the code">
 </p>
 <p align="center">
-The original point cloud (upper left), the model made by hand in Blender (upper right), and the model produced by this code (bottom).
+The original point cloud (1), the model made by hand in Blender (2), and the model produced by this code (3).
 </p>
