@@ -60,7 +60,7 @@ This repository contains the code for the automatic method. It is primarily used
 </ul>
 </p>
 <p>
-During the process, the code separates the ground points from the ponts of the buildings and other objects, then, through multiple cleaning and noise filtering steps, it segments the buildings into clusters. As the final steps, it uses Alphashape and Delaunay-triangulation to create the mesh.
+During the process, the code separates the ground points from the points of the buildings and other objects, then, through multiple cleaning and noise filtering steps, it segments the buildings into clusters. As the final step, it uses Alphashape and Delaunay-triangulation to create the mesh.
 </p>
 
 <p align="center">
